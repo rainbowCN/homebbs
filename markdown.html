@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Bootstrap 101 Template</title>
+
+    <!-- Bootstrap -->
+    <link href="bower_components/bootstrap/dist/css/bootstrap.css" rel="stylesheet">
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+    <style>
+    	.bs-docs-section {
+    		margin-bottom: 60px;
+		}
+		.bs-example {
+		    background-color: #fff;
+		    border: 1px solid #e1e1e8;
+		    border-radius: 4px;
+		    margin-bottom: 14px;
+		    padding: 9px 14px;
+		}	
+		.example-source  {
+		    background-color: #f7f7f9;
+		}
+    </style>
+  </head>
+  <body>
+	<nav class="navbar navbar-default" role="navigation">
+	  <div class="container-fluid">
+	    <!-- Brand and toggle get grouped for better mobile display -->
+	    <div class="navbar-header">
+	      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+	        <span class="sr-only">Toggle navigation</span>
+	        <span class="icon-bar"></span>
+	        <span class="icon-bar"></span>
+	        <span class="icon-bar"></span>
+	      </button>
+	      <a class="navbar-brand" href="#">Brand</a>
+	    </div>
+	  </div><!-- /.container-fluid -->
+	</nav>
+    <div class="container">
+		<div class="row">
+			<div class="col-md-3">
+				<ul class="nav nav-pills nav-stacked" role="tablist" >
+					<li class="active"><a href="#markdown" role="tab" data-toggle="tab">Markdown</a></li>
+					<li><a href="#bower" role="tab" data-toggle="tab">Bower</a></li>
+					<li><a href="#npm" role="tab" data-toggle="tab">NPM</a></li>
+				</ul>
+			</div>
+		  	<div class="col-md-9">
+				<div class="tab-content">
+  					<div role="tabpanel" class="tab-pane fade in active" id="markdown">
+						<div class="panel panel-default">
+			  				<div class="panel-body">
+								<!-- Nav tabs -->
+								<ul class="nav nav-tabs" role="tablist">
+								  <li role="presentation" class="active"><a href="#intro" role="tab" data-toggle="tab">简介</a></li>
+								  <li role="presentation"><a href="#syntax" role="tab" data-toggle="tab">基本语法</a></li>
+								  <li role="presentation"><a href="#tools" role="tab" data-toggle="tab">工具</a></li>								  
+								  <li role="presentation"><a href="#mockup" role="tab" data-toggle="tab">范例</a></li>
+								</ul>
+								<!-- Tab panes -->
+								<div class="tab-content">									
+									<div role="tabpanel" class="tab-pane active" id="intro">
+										<div class="bs-docs-section"> 
+											<h2>什么是Markdown？</h2>
+											<hr>	
+											<p>一种轻量级的标记语言，它规定了一些文本的书写格式，就像这样(demo.MD)：</p>	
+											<div class="bs-example example-source">
+												Markdown入门<br/>
+												===========<br/>
+												定义<br/>
+												--------<br/>
+												' '内容<br/>
+												语法<br/>
+												--------<br/>
+												' '内容<br/>
+												工具<br/>
+												--------<br/>
+												' '内容<br/>
+											</div>
+											<p>demo.MD经过转换后生成的demo.HTML</p>	
+											<div class="bs-example">
+												<code>&lt;h1&gt;Markdown入门&lt;/h1&gt;</code><br/>
+												<code>&lt;h2&gt;定义&lt;/h2&gt;</code><br/>
+												&lt;p&gt;内容&lt;/p&gt;<br/>
+												<code>&lt;h2&gt;语法&lt;/h2&gt;</code><br/>
+												&lt;p&gt;内容&lt;/p&gt;<br/>
+												<code>&lt;h2&gt;工具&lt;/h2&gt;</code><br/>
+												&lt;p&gt;内容&lt;/p&gt;<br/><br/>			
+											</div>
+											<br/>
+										</div>
+									</div>
+									<div role="tabpanel" class="tab-pane" id="syntax">
+										<div class="bs-docs-section"> 
+											<h1>标题标记</h1>
+											<hr>	
+											<h2><mark>===</mark></h2>
+											<p><kbd>说明:</kbd></p>	
+		  									<p>等同于#{内容}#语法标记</p>
+											<p><kbd>.MD:</kbd></p>
+											<div class="bs-example example-source">
+												标题<br/>
+												===
+											</div>										
+											<p><kbd>HTML:</kbd></p>
+											<div class="bs-example">
+												<code>&lt;h1&gt;标题&lt;/h1&gt;</code>
+											</div>
+											<br/>
+											<h2><mark>------</mark></h2>
+											<p><kbd>说明:</kbd></p>	
+		 									<p>等同于##{内容}##语法标记</p>
+											<p><kbd>.MD:</kbd></p>
+											<div class="bs-example example-source">
+												标题<br/>
+												------
+											</div>										
+											<p><kbd>HTML:</kbd></p>
+											<div class="bs-example">
+												<code>&lt;h2&gt;标题&lt;/h2&gt;</code>
+											</div>
+											<br/>
+											<h2><mark>#</mark></h2>
+											<p><kbd>说明:</kbd></p>	
+		  									<p>标题（h1~h6）格式为使用相应个数的“#”作前缀，比如以下代码表示 h3。</p>
+											<p><kbd>.MD:</kbd></p>
+											<div class="bs-example example-source">
+												###标题###
+											</div>										
+											<p><kbd>HTML:</kbd></p>
+											<div class="bs-example">
+												<code>&lt;h3&gt;标题&lt;/h3&gt;</code>
+											</div>
+											<br/>
+											
+											<h1>内容标记</h1>
+											<hr>	
+											<h2><mark>_{内容}_</mark></h2>
+											<p><kbd>说明:</kbd></p>	
+											<p>被强调的内容</p>
+											<p><kbd>.MD:</kbd></p>
+											<div class="bs-example example-source">
+												_我是被强调的内容_
+											</div>										
+											<p><kbd>HTML:</kbd></p>
+											<div class="bs-example">
+												<code>&lt;strong&gt;我是被强调的内容&lt;/strong&gt;</code>
+											</div>
+											<br/>
+										</div>							
+									</div>
+								  	<div role="tabpanel" class="tab-pane" id="mockup">...</div>
+								  	<div role="tabpanel" class="tab-pane" id="tools">
+								  		<div class="bs-docs-section"> 
+								  			<h1>Markdown在线转换工具</h1>
+								  			<br>
+								  			<h4>请输入Markdown标记</h4>
+										    <textarea id="text-input" oninput="this.editor.update()" rows="6" cols="100">Type **Markdown** here.</textarea>
+										    <h4>生成相应的HTML标记</h4>
+										    <textarea id="preview" rows="6" cols="100"> </textarea>
+										    <script src="node_modules/markdown/lib/markdown.js"></script>
+										    <script>
+										      function Editor(input, preview) {
+										        this.update = function () {
+										          preview.innerHTML = markdown.toHTML(input.value);
+										        };
+										        input.editor = this;
+										        this.update();
+										      }
+										      var $ = function (id) { return document.getElementById(id); };
+										      new Editor($("text-input"), $("preview"));
+										    </script>
+										</div>								  	
+								  	</div>							
+								</div>
+				  			</div>		  	
+						</div>
+  					</div>
+  					<div role="tabpanel" class="tab-pane fade" id="bower">
+						<div class="panel panel-default">
+			  				<div class="panel-body">
+  								<h1>What is it Bower?</h1>			  				
+			  				</div>
+			  			</div>  					
+  					</div>  
+  					<div role="tabpanel" class="tab-pane fade" id="npm">
+						<div class="panel panel-default">
+			  				<div class="panel-body">
+  								<h1>What is it NPM?</h1>		  				
+			  				</div>
+			  			</div>    					
+  					</div>    										
+  				</div>		  	
+			</div>   
+		</div> 
+	</div>
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="bower_components/jquery/dist/jquery.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="bower_components/bootstrap/dist/js/bootstrap.js"></script>
+  </body>
+</html>
